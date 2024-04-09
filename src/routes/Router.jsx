@@ -5,7 +5,8 @@ import Profile from "../pages/Profile";
 import ProfileUpdate from "../pages/ProfileUpdate";
 import Privet from "./Privet";
 import Login from "../pages/Login";
-import Register from "../pages/Register";
+// import Register from "../pages/Register";
+import RegisterPage from "../pages/RegisterPage";
 
 
 const router = createBrowserRouter([
@@ -31,8 +32,9 @@ const router = createBrowserRouter([
             },
             {
                 path:'/register',
-                element:<Register/>
-            }
+                element:<RegisterPage/>
+            },
+
         ]
     },
 ]);

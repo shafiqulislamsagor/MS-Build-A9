@@ -1,37 +1,50 @@
-import {  createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import Auth from './../firebase/firebase.config';
 
 export const ContextRoutes = createContext(null)
 
-const ContextHooks = ({children}) => {
-    const [user , setUser] = useState(null)
+const ContextHooks = ({ children }) => {
+    const [user, setUser] = useState(null)
 
     // Email Create Users
-    const registerHooks = (email,password) =>{
-        return createUserWithEmailAndPassword(Auth,email,password)
+    const registerHooks = (email, password) => {
+        return createUserWithEmailAndPassword(Auth, email, password)
+    }
+
+    // Update Profile Users
+    const update = (name,photo) =>{
+        return updateProfile(Auth.currentUser, {
+            displayName: name, photoURL: photo
+        })
     }
 
     // Google Create Users
-    const googleHooks = () =>{
-        const googleProvider = new GoogleAuthProvider()
-        signInWithPopup(Auth,googleProvider)
+    const googleProvider = new GoogleAuthProvider()
+    const googleHooks = () => {
+        return signInWithPopup(Auth, googleProvider)
+    }
+
+    // GitHub Create Users
+    const GitHubProvider = new GithubAuthProvider();
+    const gitHubHooks = () => {
+        return signInWithPopup(Auth, GitHubProvider)
     }
 
 
-    const logoutHooks = () =>{
+    const logoutHooks = () => {
         return signOut(Auth)
     }
-    useEffect(()=>{
-        const unSubscribe = onAuthStateChanged(Auth,(user)=>{
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(Auth, (user) => {
             setUser(user)
         })
-        return ()=>{
+        return () => {
             unSubscribe()
         }
-    },[])
-    const contextValues = {registerHooks,logoutHooks,user,googleHooks}
+    }, [])
+    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update}
     return (
         <ContextRoutes.Provider value={contextValues}>
             {children}
