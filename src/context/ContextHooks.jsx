@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import Auth from './../firebase/firebase.config';
 
 export const ContextRoutes = createContext(null)
@@ -18,6 +18,11 @@ const ContextHooks = ({ children }) => {
         return updateProfile(Auth.currentUser, {
             displayName: name, photoURL: photo
         })
+    }
+
+    // Log In Users
+    const logIn = (email,password) =>{
+        return signInWithEmailAndPassword(Auth, email, password)
     }
 
     // Google Create Users
@@ -44,7 +49,7 @@ const ContextHooks = ({ children }) => {
             unSubscribe()
         }
     }, [])
-    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update}
+    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn}
     return (
         <ContextRoutes.Provider value={contextValues}>
             {children}

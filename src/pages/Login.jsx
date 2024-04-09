@@ -1,21 +1,55 @@
 import { Link } from 'react-router-dom';
 import '../fonts/fonts.css'
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Animation from '../components/Animation';
 import google from '../assets/icons8-google.svg'
 import github from '../assets/icons8-github.svg'
+import { ContextRoutes } from '../context/ContextHooks';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 AOS.init();
 
 const Login = () => {
+    const navigate = useNavigate();
     const [hidePoint, setHidePoint] = useState(true)
     const [hide, setHide] = useState('password')
+    const {logIn,gitHubHooks,googleHooks} = useContext(ContextRoutes)
     const formHandle = e => {
         e.preventDefault()
-
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        logIn(email,password)
+        .then(()=>{
+            toast.success('logIn Successfully')
+            navigate('/');
+        })
+        .catch(()=>{
+            toast.error('Wrong Your Email or Password.!')
+        })
+    }
+    const googleHandle = () =>{
+        googleHooks()
+        .then(()=>{
+            toast.success('google login your Accounts')
+            navigate('/');
+        })
+        .catch(()=>{
+            toast.error('Please, Try Again')
+        })
+    }
+    const githubHandle = () =>{
+        gitHubHooks()
+        .then(()=>{
+            toast.success('GitHub login your Accounts')
+            navigate('/');
+        })
+        .catch(()=>{
+            toast.error('Please, Try Again')
+        })
     }
     const hideHandle = () => {
         if (hidePoint) {
@@ -39,22 +73,20 @@ const Login = () => {
                     className="text-center lg:text-left">
                     <Animation />
                 </div>
-                <div data-aos="fade-left"
-                    data-aos-offset="200"
-                    data-aos-easing="ease-in-sine" className="hidden lg:card shrink-0 w-full max-w-sm shadow-2xl bg-cyan-800 bg-opacity-30">
+                <div data-aos="fade-left" className="card shrink-0 w-full md:w-3/4 lg:w-2/5  shadow-2xl bg-cyan-800 bg-opacity-30">
                     <form onSubmit={formHandle} className="card-body">
                         <span className="label-text text-3xl text-center text-white font-semibold saira">Log In</span>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-white font-semibold saira">Email</span>
                             </label>
-                            <input type="email" placeholder="email" className="input input-bordered text-black font-medium bg-opacity-85" required />
+                            <input type="email" name='email' placeholder="email" className="input input-bordered text-black font-medium bg-opacity-85" required />
                         </div>
                         <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text text-white font-semibold saira">Password</span>
                             </label>
-                            <input type={hide} placeholder="password" className="input input-bordered text-black font-medium bg-opacity-85" required />
+                            <input type={hide} placeholder="password" name='password' className="input input-bordered text-black font-medium bg-opacity-85" required />
                             <h1 onClick={hideHandle} className='absolute right-[3%] bottom-[40%] cursor-pointer text-black opacity-85'>{hidePoint ? <FaRegEyeSlash /> : <FaRegEye />}</h1>
                             <label className="hover:text-white hover:underline cursor-pointer mt-2">
                                 <a className="text-white saira font-medium">Forgot password ?</a>
@@ -69,47 +101,10 @@ const Login = () => {
 
                     </form>
                     <div className='pb-6 mx-auto flex gap-3'>
-                        <button className='btn p-2 w-12 h-auto rounded-full'>
+                        <button onClick={googleHandle} className='btn p-2 w-12 h-auto rounded-full'>
                             <img src={google} alt="" />
                         </button>
-                        <button className='btn p-2 w-12 h-auto rounded-full'>
-                            <img src={github} alt="" />
-                        </button>
-
-                    </div>
-                </div>
-                <div  className="lg:hidden card shrink-0 w-full max-w-sm shadow-2xl bg-cyan-800 bg-opacity-30">
-                    <form onSubmit={formHandle} className="card-body">
-                        <span className="label-text text-3xl text-center text-white font-semibold saira">Log In</span>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text text-white font-semibold saira">Email</span>
-                            </label>
-                            <input type="email" placeholder="email" className="input input-bordered text-black font-medium bg-opacity-85" required />
-                        </div>
-                        <div className="form-control relative">
-                            <label className="label">
-                                <span className="label-text text-white font-semibold saira">Password</span>
-                            </label>
-                            <input type={hide} placeholder="password" className="input input-bordered text-black font-medium bg-opacity-85" required />
-                            <h1 onClick={hideHandle} className='absolute right-[3%] bottom-[40%] cursor-pointer text-black opacity-85'>{hidePoint ? <FaRegEyeSlash /> : <FaRegEye />}</h1>
-                            <label className="hover:text-white hover:underline cursor-pointer mt-2">
-                                <a className="text-white saira font-medium">Forgot password ?</a>
-                            </label>
-                        </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
-                        </div>
-                        <label className="hover:text-white hover:underline cursor-pointer mt-2">
-                            <Link to='/register' className="text-white saira font-medium">Don&#39;t have an account? Register</Link>
-                        </label>
-
-                    </form>
-                    <div className='pb-6 mx-auto flex gap-3'>
-                        <button className='btn p-2 w-12 h-auto rounded-full'>
-                            <img src={google} alt="" />
-                        </button>
-                        <button className='btn p-2 w-12 h-auto rounded-full'>
+                        <button onClick={githubHandle} className='btn p-2 w-12 h-auto rounded-full'>
                             <img src={github} alt="" />
                         </button>
 
