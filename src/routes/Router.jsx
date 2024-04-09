@@ -3,6 +3,9 @@ import Roots from "../Roots";
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import ProfileUpdate from "../pages/ProfileUpdate";
+import Privet from "./Privet";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 
 const router = createBrowserRouter([
@@ -16,11 +19,19 @@ const router = createBrowserRouter([
             },
             {
                 path:'/profile',
-                element:<Profile/>
+                element:<Privet><Profile/></Privet>
             },
             {
                 path:'/profileUpdate',
-                element:<ProfileUpdate/>
+                element:<Privet><ProfileUpdate/></Privet>
+            },
+            {
+                path:'/login',
+                element:<Login/>
+            },
+            {
+                path:'/register',
+                element:<Register/>
             }
         ]
     },
