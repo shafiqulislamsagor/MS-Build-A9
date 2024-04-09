@@ -4,12 +4,14 @@ import SubHeading from './components/SubHeading';
 import './index.css'
 import { Outlet } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ContextRoutes } from './context/ContextHooks';
 
 const Roots = () => {
     const [path, setPath] = useState('HOME')
     const location = useLocation()
     const pathName = location.pathname.replace('/', '').toUpperCase()
+    const { loading } = useContext(ContextRoutes)
     useEffect(() => {
         if (pathName) {
             setPath(pathName)
@@ -25,11 +27,15 @@ const Roots = () => {
             <Helmet>
                 <title>{path} || MS Build</title>
             </Helmet>
-            <div className='bg-sky-900'>
-                <SubHeading />
-            </div>
-            <Navber />
-            <Outlet />
+            {
+                loading && <div>
+                    <div className='bg-sky-900'>
+                        <SubHeading />
+                    </div>
+                    <Navber />
+                    <Outlet />
+                </div>
+            }
         </div>
     );
 };

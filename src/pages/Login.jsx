@@ -65,11 +65,9 @@ const Login = () => {
         }
     }
     return (
-        <div className="hero mt-8 bg-transparent text-white w-full lg:w-4/5 mx-auto">
+        <div className="hero items-start mt-4 bg-transparent text-white w-full lg:w-4/5 mx-auto">
             <div className="hero-content w-auto flex-col lg:flex-row">
                 <div data-aos="fade-right"
-                    data-aos-offset="200"
-                    data-aos-easing="ease-in-sine"
                     className="text-center lg:text-left">
                     <Animation />
                 </div>

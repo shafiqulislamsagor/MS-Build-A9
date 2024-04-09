@@ -6,6 +6,7 @@ import Auth from './../firebase/firebase.config';
 export const ContextRoutes = createContext(null)
 
 const ContextHooks = ({ children }) => {
+    const [loading,setLoading] = useState(false)
     const [user, setUser] = useState(null)
 
     // Email Create Users
@@ -44,12 +45,13 @@ const ContextHooks = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(Auth, (user) => {
             setUser(user)
+            setLoading(true)
         })
         return () => {
             unSubscribe()
         }
     }, [])
-    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn}
+    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn,loading}
     return (
         <ContextRoutes.Provider value={contextValues}>
             {children}
