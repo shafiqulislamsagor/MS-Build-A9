@@ -44,9 +44,10 @@ const Register = () => {
 
     const googleHandle = () => {
         googleHooks()
-            .then(() => {
-                toast.success('Account Create with google')
+            .then((current) => {
+                toast.success('Account Create with google', current);
                 logoutHooks()
+
             })
             .catch(() => {
                 toast.error('not create a accounts')
@@ -70,7 +71,7 @@ const Register = () => {
     return (
         <div className="hero mt-8 bg-transparent text-white w-full lg:w-4/5 mx-auto">
             <div className="hero-content w-auto flex-col gap-8 md:gap-0 lg:flex-row">
-                <div className="text-center lg:text-left">
+                <div data-aos="fade-right" className="text-center lg:text-left">
                     <RegisterAnimations />
                 </div>
                 <div data-aos="fade-left"
@@ -126,34 +127,37 @@ const Register = () => {
 
                     </div>
                 </div>
-                <div className="lg:hidden card shrink-0 w-full max-w-sm shadow-2xl bg-cyan-800 bg-opacity-30">
-                    <form className="card-body">
+                <div data-aos="fade-left"
+                    className="lg:hidden card shrink-0 w-full max-w-sm shadow-2xl bg-cyan-800 bg-opacity-30">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <span className="label-text text-3xl text-center text-white font-semibold saira">Register Now</span>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-white font-semibold saira">FullName</span>
                             </label>
-                            <input type="text" placeholder="Name" className="input input-bordered text-black font-medium bg-opacity-85" required />
+                            <input {...register("name", { required: true, maxLength: 30 })} type="text" placeholder="Name" name='name' className="input input-bordered text-black font-medium bg-opacity-85" required />
                         </div>
+                        {errors.name && <span className='text-red-500 saira text-sm font-bold'>maximum 30 charater</span>}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-white font-semibold saira">Email</span>
                             </label>
-                            <input type="email" placeholder="email" className="input input-bordered text-black font-medium bg-opacity-85" required />
+                            <input {...register("email", { required: true, pattern: emailRegex })} type="email" placeholder="email" name='email' className="input input-bordered text-black font-medium bg-opacity-85" required />
+                            {errors.email && <span className='text-red-500 saira text-sm font-bold'>This field is required</span>}
                         </div>
                         <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text text-white font-semibold saira">Password</span>
                             </label>
-                            <input type={hide} placeholder="password" className="input input-bordered text-black font-medium bg-opacity-85" required />
+                            <input {...register('password', { required: true, pattern: passwordRegex })} type={hide} placeholder="password" className="input input-bordered text-black font-medium bg-opacity-85" required />
                             <h1 onClick={hideHandle} className='absolute right-[3%] bottom-[18%] cursor-pointer text-black opacity-85'>{hidePoint ? <FaRegEyeSlash /> : <FaRegEye />}</h1>
-
                         </div>
+                        {errors.password && <span className='text-red-500 saira text-sm font-bold'>please , this field provided strong password and minium 6 character</span>}
                         <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text text-white font-semibold saira">Confirm Password</span>
                             </label>
-                            <input type={hide} placeholder="confirm password" className="input input-bordered text-black font-medium bg-opacity-85" required />
+                            <input {...register('confirmPassword', { required: true })} name='confirmPassword' type={hide} placeholder="confirm password" className="input input-bordered text-black font-medium bg-opacity-85" required />
                             <h1 onClick={hideHandle} className='absolute right-[3%] bottom-[18%] cursor-pointer text-black opacity-85'>{hidePoint ? <FaRegEyeSlash /> : <FaRegEye />}</h1>
 
                         </div>

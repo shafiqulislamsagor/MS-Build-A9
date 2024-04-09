@@ -24,9 +24,12 @@ const ContextHooks = ({children}) => {
         return signOut(Auth)
     }
     useEffect(()=>{
-        onAuthStateChanged(Auth,(user)=>{
+        const unSubscribe = onAuthStateChanged(Auth,(user)=>{
             setUser(user)
         })
+        return ()=>{
+            unSubscribe()
+        }
     },[])
     const contextValues = {registerHooks,logoutHooks,user,googleHooks}
     return (
