@@ -9,7 +9,7 @@ const Navber = () => {
         setHidden(!hidden)
     }
     return (
-        <header className="p-4 bg-transparent saira  text-gray-100 sticky top-0">
+        <header className="px-4 bg-sky-900 saira  text-gray-100 sticky z-10 top-0">
             <div className="container flex justify-between items-center h-16 mx-auto">
                 <a rel="noopener noreferrer" aria-label="Back to homepage" className="flex items-center p-2">
                     <h2 className='font-semibold text-xl sm:text-2xl lg:text-4xl design'><span className='webPrimary'>M</span><span className='textLogo'>S</span> Build</h2>
@@ -44,15 +44,15 @@ const Navber = () => {
                             </div>
                         </div>
                         <ul className={hidden ? 'hidden' : 'mt-3 animate__bounceInRight p-2 absolute top-10 right-0 shadow menu menu-sm bg-transparent border rounded-box w-40'}>
-                            <li><a >Home</a></li>
+                            <li><Link to='/'>Home</Link></li>
                             <li>
-                                <a className="justify-between">
+                                <Link to='/profile' className="justify-between">
                                     Profile
                                     <span className="badge">New</span>
-                                </a>
+                                </Link>
                             </li>
-                            <li><a>ProfileUpdate</a></li>
-                            <li><a>Logout</a></li>
+                            <li><Link to='/profileUpdate'>ProfileUpdate</Link></li>
+                            <li><Link to='/login'>Logout</Link></li>
                         </ul>
 
                     </div>

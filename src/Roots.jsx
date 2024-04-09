@@ -25,7 +25,9 @@ const Roots = () => {
             <Helmet>
                 <title>{path} || MS Build</title>
             </Helmet>
-            <SubHeading />
+            <div className='bg-sky-900'>
+                <SubHeading />
+            </div>
             <Navber />
             <Outlet />
         </div>
