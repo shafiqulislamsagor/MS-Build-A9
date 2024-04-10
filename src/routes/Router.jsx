@@ -7,6 +7,7 @@ import Privet from "./Privet";
 import Login from "../pages/Login";
 // import Register from "../pages/Register";
 import RegisterPage from "../pages/RegisterPage";
+import PrivetSignIn from "./PrivetSignIn";
 
 
 const router = createBrowserRouter([
@@ -28,11 +29,11 @@ const router = createBrowserRouter([
             },
             {
                 path:'/login',
-                element:<Login/>
+                element:<PrivetSignIn><Login/></PrivetSignIn>
             },
             {
                 path:'/register',
-                element:<RegisterPage/>
+                element:<PrivetSignIn><RegisterPage/></PrivetSignIn>
             },
 
         ]
