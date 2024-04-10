@@ -42,7 +42,7 @@ const Banner = () => {
                     <div className='sliderA min-h-screen'>
                         <div className='bg-black bg-opacity-70 w-full min-h-screen max-h-full'>
                             <section className="py-5 bg-transparent text-gray-100 flex flex-col justify-center min-h-full">
-                                <div className="container  mx-auto flex flex-col items-center px-4 py-16 text-center ">
+                                <div className="container lg:w-1/2  mx-auto lg:mt-16 flex flex-col items-center px-4 py-16 text-center ">
                                     <h1 className="text-4xl font-bold leading-none sm:text-5xl">Luxury <span className="webPrimary">Apartment </span>Services
                                     </h1>
                                     <p className="mt-6 mb-8 text-lg font-light sm:mb-12 lato">Explore a diverse range of residential options tailored to your lifestyle. Whether you&apos;re seeking a cozy apartment!</p>

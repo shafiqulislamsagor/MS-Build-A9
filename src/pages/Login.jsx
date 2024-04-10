@@ -17,39 +17,39 @@ const Login = () => {
     const navigate = useNavigate();
     const [hidePoint, setHidePoint] = useState(true)
     const [hide, setHide] = useState('password')
-    const {logIn,gitHubHooks,googleHooks} = useContext(ContextRoutes)
+    const { logIn, gitHubHooks, googleHooks } = useContext(ContextRoutes)
     const formHandle = e => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
-        logIn(email,password)
-        .then(()=>{
-            toast.success('logIn Successfully')
-            navigate('/');
-        })
-        .catch(()=>{
-            toast.error('Wrong Your Email or Password.!')
-        })
+        logIn(email, password)
+            .then(() => {
+                toast.success('logIn Successfully')
+                navigate('/');
+            })
+            .catch(() => {
+                toast.error('Wrong Your Email or Password.!')
+            })
     }
-    const googleHandle = () =>{
+    const googleHandle = () => {
         googleHooks()
-        .then(()=>{
-            toast.success('google login your Accounts')
-            navigate('/');
-        })
-        .catch(()=>{
-            toast.error('Please, Try Again')
-        })
+            .then(() => {
+                toast.success('google login your Accounts')
+                navigate('/');
+            })
+            .catch(() => {
+                toast.error('Please, Try Again')
+            })
     }
-    const githubHandle = () =>{
+    const githubHandle = () => {
         gitHubHooks()
-        .then(()=>{
-            toast.success('GitHub login your Accounts')
-            navigate('/');
-        })
-        .catch(()=>{
-            toast.error('Please, Try Again')
-        })
+            .then(() => {
+                toast.success('GitHub login your Accounts')
+                navigate('/');
+            })
+            .catch(() => {
+                toast.error('Please, Try Again')
+            })
     }
     const hideHandle = () => {
         if (hidePoint) {
@@ -98,6 +98,11 @@ const Login = () => {
                         </label>
 
                     </form>
+                    <div className="flex w-4/5 mx-auto items-center py-2 space-x-1 saira">
+                        <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
+                        <p className="px-3 text-sm ">Login with social accounts</p>
+                        <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
+                    </div>
                     <div className='pb-6 mx-auto flex gap-3'>
                         <button onClick={googleHandle} className='btn p-2 w-12 h-auto rounded-full'>
                             <img src={google} alt="" />

@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import { ContextRoutes } from './context/ContextHooks';
+import Footer from './components/Footer';
 
 const Roots = () => {
     const [path, setPath] = useState('HOME')
@@ -34,6 +35,7 @@ const Roots = () => {
                     </div>
                     <Navber />
                     <Outlet />
+                    <Footer/>
                 </div>
             }
         </div>

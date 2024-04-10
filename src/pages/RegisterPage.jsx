@@ -141,6 +141,11 @@ const RegisterPage = () => {
                         </label>
 
                     </form>
+                    <div className="flex w-4/5 mx-auto items-center py-2 space-x-1 saira">
+                        <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
+                        <p className="px-3 text-sm ">Register with social accounts</p>
+                        <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
+                    </div>
                     <div className='pb-6 mx-auto flex gap-3'>
                         <button onClick={googleHandle} className='btn p-2 w-12 h-auto rounded-full'>
                             <img src={google} alt="" />
