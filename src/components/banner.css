@@ -1,0 +1,30 @@
+.sliderA{
+    background-image: url('https://i.ibb.co/Nn8dDjT/slider5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sliderB{
+    background-image: url('https://i.ibb.co/7QsDPRc/slider4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sliderC{
+    background-image: url('https://i.ibb.co/N2j1W4T/slider3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sliderD{
+    background-image: url('https://i.ibb.co/G3xfGJy/slider2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sliderE{
+    background-image: url('https://i.ibb.co/zfL8rDy/slider1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
