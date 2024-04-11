@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Luxurious Villa in Beverly Hills",
+        "segment_name": "Luxury",
+        "description": "A stunning villa nestled in the heart of Beverly Hills, this luxurious residence epitomizes elegance and sophistication. Spanning 6000 square feet, this sprawling estate boasts exquisite architecture and meticulous attention to detail. Upon entry, guests are greeted by a grand foyer adorned with exquisite chandeliers and marble flooring, setting the tone for the opulence that awaits within. The villa features expansive living spaces, including multiple lounges, a formal dining room, and a state-of-the-art kitchen equipped with top-of-the-line appliances. The master suite is a sanctuary of indulgence, complete with a private balcony overlooking the manicured gardens and a luxurious en-suite bathroom with a spa-like atmosphere. Outdoor amenities abound, with a sparkling swimming pool, a fully equipped gym, and lush landscaping creating a tranquil oasis for relaxation and entertainment. With its prime location in Beverly Hills, renowned for its celebrity residents and exclusive lifestyle, this villa offers the epitome of luxury living. Whether as a primary residence or a vacation retreat, this property presents a rare opportunity to experience the height of luxury in one of the world's most coveted destinations.",
+        "price": "$5,000,000",
+        "status": "sale",
+        "area": "6000 sqft",
+        "location": "Beverly Hills, California",
+        "facilities": [
+            "swimming pool",
+            "gym",
+            "home theater",
+            "landscaped garden"
+        ],
+        "images": [
+            "https://i.ibb.co/djcbtxk/home11.jpg",
+            "https://i.ibb.co/GJwZ3kF/home111.jpg",
+            "https://i.ibb.co/CMVWz50/home1111.jpg",
+            "https://i.ibb.co/VVtBChc/home1.jpg"
+        ],
+        "view_property_url": "https://example.com/view-property/1"
+    },
+    {
+        "id": 2,
+        "estate_title": "Cozy Apartment in Manhattan",
+        "segment_name": "Urban",
+        "description": "Welcome to this charming apartment nestled in the heart of Manhattan. This cozy abode offers a perfect blend of comfort and convenience, ideal for urban living enthusiasts. With 1200 square feet of space, this apartment features a bright and airy living area, a modern kitchen with stainless steel appliances, and a spacious bedroom with ample closet space. The apartment also boasts a stylish bathroom with contemporary fixtures and a separate laundry area for added convenience. Residents can enjoy access to building amenities such as a fitness center, rooftop terrace, and 24/7 security for peace of mind. Located in the vibrant city of Manhattan, this apartment provides easy access to a plethora of dining, shopping, and entertainment options, making it the perfect choice for those seeking a dynamic city lifestyle. Whether you're a young professional or a couple looking for your first home in the city, this apartment offers a comfortable retreat in the bustling metropolis of Manhattan.",
+        "price": "$3,500/month",
+        "status": "rent",
+        "area": "1200 sqft",
+        "location": "Manhattan, New York",
+        "facilities": [
+            "fitness center",
+            "rooftop terrace",
+            "24/7 security"
+        ],
+        "images": [
+            "https://i.ibb.co/G2m7L0n/home2.jpg",
+            "https://i.ibb.co/3svVP4b/home8888.jpg",
+            "https://i.ibb.co/GJwZ3kF/home111.jpg",
+            "https://i.ibb.co/4MNyLzY/home22.jpg"
+        ],
+        "view_property_url": "https://example.com/view-property/2"
+    },
+    {
+        "id": 3,
+        "estate_title": "Spacious Family Home in Suburban Chicago",
+        "segment_name": "Family",
+        "description": "Nestled in a peaceful suburb of Chicago, this spacious family home offers the perfect retreat for you and your loved ones. Boasting 3000 square feet of living space, this home features a warm and inviting atmosphere, ideal for creating lasting memories with family and friends. The main level welcomes you with a cozy living room, perfect for relaxing evenings by the fireplace, and a spacious kitchen equipped with modern appliances and ample storage space. Upstairs, you'll find the master suite, complete with a luxurious en-suite bathroom and walk-in closet, along with three additional bedrooms and a shared bathroom. The finished basement offers additional living space, perfect for a home office, gym, or entertainment area. Outside, the fenced backyard provides plenty of room for outdoor activities, while the attached garage offers convenient parking for two vehicles. With its convenient location near schools, parks, and shopping centers, this family home offers the perfect blend of comfort and convenience for modern family living.",
+        "price": "$450,000",
+        "status": "sale",
+        "area": "3000 sqft",
+        "location": "Chicago, Illinois",
+        "facilities": [
+            "backyard",
+            "playroom",
+            "study room",
+            "garage"
+        ],
+        "images": [
+            "https://i.ibb.co/9TB41FP/home3.jpg",
+            "https://i.ibb.co/0GL0Xd5/home7777.jpg",
+            "https://i.ibb.co/zGk3zV2/home222.jpg",
+            "https://i.ibb.co/Lhbrngs/home33.jpg"
+        ],
+        "view_property_url": "https://example.com/view-property/3"
+    },
+    {
+        "id": 4,
+        "estate_title": "Modern Loft in Downtown Los Angeles",
+        "segment_name": "Urban",
+        "description": "Experience urban living at its finest in this modern loft located in the heart of downtown Los Angeles. This sleek and contemporary residence features 1500 square feet of open-concept living space, with soaring ceilings and floor-to-ceiling windows that flood the interior with natural light. The loft boasts a spacious living area, perfect for entertaining guests, and a gourmet kitchen with high-end appliances and a large center island. The bedroom area offers privacy and tranquility, with a luxurious en-suite bathroom featuring a spa-like shower and soaking tub. Residents can enjoy breathtaking views of the city skyline from the private balcony, or take advantage of building amenities such as a fitness center and concierge service. With its prime location near restaurants, shops, and cultural attractions, this modern loft offers the ultimate urban lifestyle for those seeking luxury and convenience in the heart of Los Angeles.",
+        "price": "$800,000",
+        "status": "sale",
+        "area": "1500 sqft",
+        "location": "Los Angeles, California",
+        "facilities": [
+            "open floor plan",
+            "balcony with city views",
+            "fitness center"
+        ],
+        "images": [
+            "https://i.ibb.co/QQrLgMf/home4.jpg",
+            "https://i.ibb.co/3yX6C7Q/home6666.jpg",
+            "https://i.ibb.co/FKVczJd/home444.jpg",
+            "https://i.ibb.co/pxxkrTx/home333.jpg"
+        ],
+        "view_property_url": "https://example.com/view-property/4"
+    },
+    {
+        "id": 5,
+        "estate_title": "Charming Cottage in Coastal Maine",
+        "segment_name": "Coastal",
+        "description": "Escape to the serene beauty of coastal Maine in this charming cottage nestled along the shores of the Atlantic Ocean. Surrounded by picturesque landscapes and tranquil waters, this cozy retreat offers the perfect blend of comfort and natural beauty. The cottage features 1200 square feet of living space, with a rustic yet modern interior that exudes warmth and charm. The main level boasts a cozy living room with a wood-burning fireplace, a fully equipped kitchen with modern appliances, and a dining area with panoramic views of the ocean. Upstairs, you'll find two bedrooms and a full bathroom, each offering stunning views of the surrounding landscape. Outside, the expansive deck provides plenty of space for outdoor dining and relaxation, while the private beach offers direct access to the water for swimming, kayaking, and beachcombing. Whether you're seeking a peaceful retreat or a seaside getaway, this charming cottage offers the perfect opportunity to experience the beauty and tranquility of coastal Maine.",
+        "price": "$300,000",
+        "status": "sale",
+        "area": "1200 sqft",
+        "location": "Maine, USA",
+        "facilities": [
+            "front porch",
+            "fireplace",
+            "garden",
+            "ocean views"
+        ],
+        "images": [
+            "https://i.ibb.co/qrZwqHP/home5.jpg",
+            "https://i.ibb.co/dMvvkMR/home5555.jpg",
+            "https://i.ibb.co/tJPgB37/home555.jpg",
+            "https://i.ibb.co/0jdn3t6/home55.jpg"
+        ],
+        "view_property_url": "https://example.com/view-property/5"
+    },
+    {
+        "id": 6,
+        "estate_title": "Luxury Penthouse in Dubai Marina",
+        "segment_name": "Luxury",
+        "description": "Indulge in the ultimate luxury living experience in this exquisite penthouse located in the prestigious Dubai Marina. Boasting 8000 square feet of opulent living space, this lavish residence offers unparalleled views of the marina skyline and the Arabian Gulf. The penthouse features a stunning open-concept layout, with floor-to-ceiling windows and designer finishes throughout. The spacious living area is perfect for entertaining guests, while the gourmet kitchen is equipped with top-of-the-line appliances and a large island for casual dining. The master suite is a private sanctuary, complete with a spa-like bathroom, dressing room, and private terrace overlooking the water. Residents can enjoy exclusive access to building amenities such as a private pool, concierge service, and spa, as well as nearby attractions including luxury shopping malls, fine dining restaurants, and pristine beaches. Whether you're seeking a luxurious primary residence or an upscale vacation retreat, this penthouse offers the epitome of luxury living in the vibrant city of Dubai.",
+        "price": "$10,000,000",
+        "status": "sale",
+        "area": "8000 sqft",
+        "location": "Dubai, UAE",
+        "facilities": [
+            "private pool",
+            "concierge service",
+            "gourmet kitchen",
+            "spa"
+        ],
+        "images": [
+            "https://i.ibb.co/dm9r3Rs/home6.jpg",
+            "https://i.ibb.co/m4yJSL8/home4444.jpg",
+            "https://i.ibb.co/87nV9hp/home666.jpg",
+            "https://i.ibb.co/KFj4cwY/home66.jpg"
+        ],
+        "view_property_url": "https://example.com/view-property/6"
+    },
+    {
+        "id": 7,
+        "estate_title": "Rustic Cabin in the Rocky Mountains",
+        "segment_name": "Mountain",
+        "description": "Escape the hustle and bustle of city life in this charming rustic cabin nestled in the majestic Rocky Mountains. Surrounded by towering pine trees and sweeping mountain views, this cozy retreat offers the perfect opportunity to reconnect with nature and unwind in peace and tranquility. The cabin features 1000 square feet of rustic yet comfortable living space, with a warm and inviting interior that exudes charm and character. The main level boasts a cozy living room with a wood-burning stove, perfect for chilly mountain evenings, and a fully equipped kitchen with modern appliances and a dining area. Upstairs, you'll find a spacious bedroom and a full bathroom, each offering stunning views of the surrounding landscape. Outside, the expansive deck provides plenty of space for outdoor dining and relaxation, while nearby hiking trails offer endless opportunities for exploration and adventure. Whether you're seeking a weekend getaway or a permanent retreat, this rustic cabin offers the perfect escape to the natural beauty of the Rocky Mountains.",
+        "price": "$250,000",
+        "status": "sale",
+        "area": "1000 sqft",
+        "location": "Colorado, USA",
+        "facilities": [
+            "wood-burning stove",
+            "deck with mountain views",
+            "hiking trails nearby"
+        ],
+        "images": [
+            "https://i.ibb.co/5rsJYk9/home7.jpg",
+            "https://i.ibb.co/kDHLKkd/home3333.jpg",
+            "https://i.ibb.co/RQ7J6LZ/home777.jpg",
+            "https://i.ibb.co/RyZFVZL/home77.jpg"
+        ],
+        "view_property_url": "https://example.com/view-property/7"
+    },
+    {
+        "id": 8,
+        "estate_title": "Contemporary Townhouse in San Francisco",
+        "segment_name": "Urban",
+        "description": "Experience modern urban living in this contemporary townhouse located in the vibrant city of San Francisco. Nestled in a bustling neighborhood with easy access to dining, shopping, and cultural attractions, this stylish residence offers the perfect blend of comfort and convenience. The townhouse features 2000 square feet of living space, with an open-concept layout and designer finishes throughout. The main level boasts a spacious living area with hardwood floors and large windows that flood the interior with natural light, as well as a gourmet kitchen with quartz countertops and stainless steel appliances. Upstairs, you'll find a luxurious master suite with a walk-in closet and en-suite bathroom, along with two additional bedrooms and a full bathroom. The rooftop deck offers breathtaking views of the city skyline, perfect for entertaining guests or enjoying a quiet evening under the stars. With its prime location near public transportation and major highways, this contemporary townhouse offers the ultimate urban lifestyle for those seeking modern comforts in the heart of San Francisco.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "2000 sqft",
+        "location": "San Francisco, California",
+        "facilities": [
+            "rooftop deck",
+            "garage",
+            "smart home technology"
+        ],
+        "images": [
+            "https://i.ibb.co/2jspqsY/home8.jpg",
+            "https://i.ibb.co/8B3QNXv/home2222.jpg",
+            "https://i.ibb.co/Jj0DfKH/home888.jpg",
+            "https://i.ibb.co/RyZFVZL/home77.jpg"
+        ],
+        "view_property_url": "https://example.com/view-property/8"
+    }
+]

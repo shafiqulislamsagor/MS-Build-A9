@@ -29,13 +29,15 @@ const Roots = () => {
                 <title>{path} || MS Build</title>
             </Helmet>
             {
-                loading && <div>
-                    <div className='bg-sky-900'>
-                        <SubHeading />
+                loading && <div className='flex flex-col min-h-screen'>
+                    <div className='flex-grow'>
+                        <div className='bg-sky-900'>
+                            <SubHeading />
+                        </div>
+                        <Navber />
+                        <Outlet />
                     </div>
-                    <Navber />
-                    <Outlet />
-                    <Footer/>
+                    <Footer />
                 </div>
             }
         </div>
