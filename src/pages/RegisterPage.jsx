@@ -52,8 +52,8 @@ const RegisterPage = () => {
 
     const googleHandle = () => {
         googleHooks()
-            .then((user) => {
-                console.log(user);
+            .then(() => {
+                // console.log(user);
                 toast.success('Account Create with google')
                 logoutHooks()
                 navigate('/login');
@@ -64,8 +64,8 @@ const RegisterPage = () => {
     }
     const GitHubHandle = () => {
         gitHubHooks()
-            .then((user) => {
-                console.log(user);
+            .then(() => {
+                // console.log(user);
                 toast.success('Account Create with GitHub')
                 logoutHooks()
                 navigate('/login');

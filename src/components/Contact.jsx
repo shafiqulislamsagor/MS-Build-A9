@@ -3,7 +3,7 @@ import ContactAnimation from "./ContactAnimation";
 
 const Contact = () => {
     return (
-        <div className="grid mb-8 grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 w-11/12 lg:w-5/6 xl:px-32 bg-cyan-900 bg-opacity-60 text-gray-100">
+        <div data-aos="fade-up-left" className="grid mb-8 grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 w-11/12 lg:w-5/6 xl:px-32 bg-cyan-900 bg-opacity-60 text-gray-100">
             <div className="flex flex-col justify-between">
                 <div className="space-y-2">
                     <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let&lsquo;s Gooo!</h2>
