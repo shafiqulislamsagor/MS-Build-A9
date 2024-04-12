@@ -4,7 +4,7 @@ import LogInAnimation from '../assets/animation.json';
 const Animation = () => {
     
     return (
-        <div className="h-full">
+        <div className="h-auto">
             <Lottie animationData={LogInAnimation} loop={true} />
         </div>
     );

@@ -1,11 +1,16 @@
 import { PropTypes } from 'prop-types';
+import { useContext } from 'react';
+import { ContextRoutes } from '../context/ContextHooks';
+import { Navigate,useLocation } from "react-router-dom";
 const Privet = ({children}) => {
-    return (
-        <div>
-            <h2 className="text-white">Hlw Privet Routes</h2>
-            {children}
-        </div>
-    );
+    const location = useLocation()
+    // console.log(location);
+    const {user} = useContext(ContextRoutes)
+    // console.log(user);
+    if(user){
+        return children
+    }
+    return <Navigate to='/login' state={location.pathname} />
 };
 
 

@@ -7,24 +7,24 @@ const CardDetails = () => {
     const Card = useLoaderData()
     const mainCard = Card.find((value) => value.id == id)
     const { estate_title, price, status, area, location, facilities, images, segment_name, description } = mainCard
-    console.log(price, status);
+    // console.log(price, status);
     return (
         <div>
             <div className='md:w-3/4 mx-auto mt-6'>
-                <Link to='/' className='btn text-3xl webPrimaryBg text-white border-2 hover:bg-orange-700 ml-8'><AiOutlineRollback/></Link>
+                <Link to='/' className='btn text-xl lg:text-3xl webPrimaryBg text-white border-2 hover:bg-orange-700 ml-8'><AiOutlineRollback/></Link>
             </div>
             <div className='mb-20'>
                 <Gallary img={images} />
-                <div className='text-white md:w-5/6 mx-auto'>
-                    <h2 className='saira text-5xl flex items-center gap-6'>{estate_title} <span className='text-lg rounded-xl px-2 lato font-light webPrimaryBg'>{segment_name}</span></h2>
+                <div className='text-white w-11/12 md:w-5/6 mx-auto'>
+                    <h2 className='saira text-3xl md:text-5xl flex items-center gap-6'>{estate_title} <span className='text-lg rounded-xl px-2 lato font-light webPrimaryBg'>{segment_name}</span></h2>
                     <div className='lato font-light flex gap-10 mt-1 mb-4'>
                         <h2 className='opacity-70
                     '><span className='font-bold'>location :</span> {location}</h2>
                         <h2 className=' opacity-70'><span className='font-bold'>Area :</span> {area}</h2>
                     </div>
 
-                    <h2 className='text-xl lato font-bold'>Description: <span className=' font-light opacity-85'>{description}</span></h2>
-                    <h2 className='text-xl font-bold webPrimary lato mt-2'>facilities : <span className='font-light text-white opacity-90'>
+                    <h2 className='text-base md:text-xl lato font-bold'>Description: <span className=' font-light opacity-85'>{description}</span></h2>
+                    <h2 className='text-lg md:text-xl font-bold webPrimary lato mt-2'>facilities : <span className='font-light text-white opacity-90'>
                         {
                             facilities.map((value, id) => <React.Fragment key={id}>
                                 <span>{value}</span>

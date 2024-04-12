@@ -35,8 +35,8 @@ const Navber = () => {
                         </NavLink>
                     </li>
                     <li className="flex relative">
-                        <NavLink to='/profileUpdate' rel="noopener noreferrer" className={({ isActive }) => isActive ? 'flex items-center -mb-1  webPrimary' : 'flex items-center -mb-1'}>ProfileUpdate</NavLink>
-                        <NavLink to='/profileUpdate' className={({ isActive }) => !isActive ? 'hidden' : 'block'}>
+                        <NavLink to='/About' rel="noopener noreferrer" className={({ isActive }) => isActive ? 'flex items-center -mb-1  webPrimary' : 'flex items-center -mb-1'}>About</NavLink>
+                        <NavLink to='/About' className={({ isActive }) => !isActive ? 'hidden' : 'block'}>
                             <div className='webPrimaryBorder border h-5 duration-500 rotate-90 absolute top-5 left-3'></div>
                         </NavLink>
                     </li>
@@ -59,7 +59,7 @@ const Navber = () => {
                                         <span className="badge">New</span>
                                     </Link>
                                 </li>
-                                <li className='sm:hidden'><Link to='/profileUpdate'>ProfileUpdate</Link></li>
+                                <li className='sm:hidden'><Link to='/About'>About</Link></li>
                                 <li onClick={logOutHandle}><Link to='/login'>Logout</Link></li>
                             </ul>
 
