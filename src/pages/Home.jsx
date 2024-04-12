@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import Estate from "../components/Estate";
+import OurLocation from "../components/OurLocation";
 const Home = () => {
     // console.log(cardData);
 
@@ -7,7 +8,7 @@ const Home = () => {
         <div className="text-white text-xl">
             <Banner/>
             <Estate/>
-            Home pages
+            <OurLocation/>
         </div>
     );
 };
