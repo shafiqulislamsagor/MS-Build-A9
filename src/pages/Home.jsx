@@ -1,11 +1,12 @@
 import Banner from "../components/Banner";
-import CardComponent from "../components/Card";
-
+import Estate from "../components/Estate";
 const Home = () => {
+    // console.log(cardData);
+
     return (
         <div className="text-white text-xl">
             <Banner/>
-            <CardComponent/>
+            <Estate/>
             Home pages
         </div>
     );
