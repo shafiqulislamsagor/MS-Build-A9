@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 // import Register from "../pages/Register";
 import RegisterPage from "../pages/RegisterPage";
 import PrivetSignIn from "./PrivetSignIn";
+import CardDetails from "../components/CardDetails";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home/>,
+                loader: ()=> fetch('/CardData.json')
+            },
+            {
+                path:'/card/:id',
+                element:<CardDetails/>,
                 loader: ()=> fetch('/CardData.json')
             },
             {

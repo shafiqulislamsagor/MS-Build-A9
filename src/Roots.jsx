@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 const Roots = () => {
     const [path, setPath] = useState('HOME')
     const location = useLocation()
-    const pathName = location.pathname.replace('/', '').toUpperCase()
+    const pathName = location.pathname.replaceAll('/', '').toUpperCase()
     const { loading } = useContext(ContextRoutes)
     useEffect(() => {
         if (pathName) {

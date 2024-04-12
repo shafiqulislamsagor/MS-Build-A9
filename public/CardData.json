@@ -19,8 +19,7 @@
             "https://i.ibb.co/GJwZ3kF/home111.jpg",
             "https://i.ibb.co/CMVWz50/home1111.jpg",
             "https://i.ibb.co/VVtBChc/home1.jpg"
-        ],
-        "view_property_url": "https://example.com/view-property/1"
+        ]
     },
     {
         "id": 2,
@@ -41,8 +40,7 @@
             "https://i.ibb.co/3svVP4b/home8888.jpg",
             "https://i.ibb.co/GJwZ3kF/home111.jpg",
             "https://i.ibb.co/4MNyLzY/home22.jpg"
-        ],
-        "view_property_url": "https://example.com/view-property/2"
+        ]
     },
     {
         "id": 3,
@@ -64,8 +62,7 @@
             "https://i.ibb.co/0GL0Xd5/home7777.jpg",
             "https://i.ibb.co/zGk3zV2/home222.jpg",
             "https://i.ibb.co/Lhbrngs/home33.jpg"
-        ],
-        "view_property_url": "https://example.com/view-property/3"
+        ]
     },
     {
         "id": 4,
@@ -86,8 +83,7 @@
             "https://i.ibb.co/3yX6C7Q/home6666.jpg",
             "https://i.ibb.co/FKVczJd/home444.jpg",
             "https://i.ibb.co/pxxkrTx/home333.jpg"
-        ],
-        "view_property_url": "https://example.com/view-property/4"
+        ]
     },
     {
         "id": 5,
@@ -109,8 +105,7 @@
             "https://i.ibb.co/dMvvkMR/home5555.jpg",
             "https://i.ibb.co/tJPgB37/home555.jpg",
             "https://i.ibb.co/0jdn3t6/home55.jpg"
-        ],
-        "view_property_url": "https://example.com/view-property/5"
+        ]
     },
     {
         "id": 6,
@@ -132,8 +127,7 @@
             "https://i.ibb.co/m4yJSL8/home4444.jpg",
             "https://i.ibb.co/87nV9hp/home666.jpg",
             "https://i.ibb.co/KFj4cwY/home66.jpg"
-        ],
-        "view_property_url": "https://example.com/view-property/6"
+        ]
     },
     {
         "id": 7,
@@ -154,8 +148,7 @@
             "https://i.ibb.co/kDHLKkd/home3333.jpg",
             "https://i.ibb.co/RQ7J6LZ/home777.jpg",
             "https://i.ibb.co/RyZFVZL/home77.jpg"
-        ],
-        "view_property_url": "https://example.com/view-property/7"
+        ]
     },
     {
         "id": 8,
@@ -176,7 +169,6 @@
             "https://i.ibb.co/8B3QNXv/home2222.jpg",
             "https://i.ibb.co/Jj0DfKH/home888.jpg",
             "https://i.ibb.co/RyZFVZL/home77.jpg"
-        ],
-        "view_property_url": "https://example.com/view-property/8"
+        ]
     }
 ]

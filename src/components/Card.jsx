@@ -9,10 +9,10 @@ import React from 'react';
 
 
 const CardComponent = ({ card }) => {
-    console.log(card);
-    const { estate_title, price, status, area, location, facilities, images } = card
+    // console.log(card);
+    const { id,estate_title, price, status, area, location, facilities, images } = card
     return (
-        <Card className='saira transition duration-150 ease-out hover:scale-105'>
+        <Card data-aos="zoom-out-down" className='saira'>
             <CardActionArea className='h-full'>
                 <div className='h-40'>
                     <ImgSlider img={images} />
@@ -39,7 +39,7 @@ const CardComponent = ({ card }) => {
                         </div>
                     </div>
                     <div>
-                        <Link className='btn webPrimaryBg text-white mt-4 hover:bg-orange-700'>View Property</Link>
+                        <Link to={`/card/${id}`} className='btn webPrimaryBg text-white mt-4 hover:bg-orange-700'>View Property</Link>
                     </div>
 
                 </CardContent>
@@ -51,6 +51,6 @@ const CardComponent = ({ card }) => {
 export default CardComponent;
 
 CardComponent.propTypes = {
-    card: PropTypes.object.isRequired
+    card: PropTypes.object
 }
 

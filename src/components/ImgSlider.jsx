@@ -14,7 +14,7 @@ import { PropTypes } from 'prop-types';
 
 
 const ImgSlider = ({ img }) => {
-    console.log(img);
+    // console.log(img);
     return (
         <div className='h-40'>
             <Swiper
@@ -40,5 +40,5 @@ const ImgSlider = ({ img }) => {
 export default ImgSlider;
 
 ImgSlider.propTypes = {
-    img: PropTypes.object.isRequired
+    img: PropTypes.array
 }
