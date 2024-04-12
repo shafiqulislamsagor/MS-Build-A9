@@ -12,7 +12,10 @@ const CardComponent = ({ card }) => {
     // console.log(card);
     const { id,estate_title, price, status, area, location, facilities, images } = card
     return (
-        <Card data-aos="zoom-out-down" className='saira'>
+        <Card data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" className='saira'>
             <CardActionArea className='h-full'>
                 <div className='h-40'>
                     <ImgSlider img={images} />
@@ -39,7 +42,7 @@ const CardComponent = ({ card }) => {
                         </div>
                     </div>
                     <div>
-                        <Link to={`/card/${id}`} className='btn webPrimaryBg text-white mt-4 hover:bg-orange-700'>View Property</Link>
+                        <Link to={`/card/${id}`} className='btn webPrimaryBg hover:scale-110 text-white mt-4 hover:bg-orange-700'>View Property</Link>
                     </div>
 
                 </CardContent>

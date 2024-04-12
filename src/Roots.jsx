@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import { ContextRoutes } from './context/ContextHooks';
 import Footer from './components/Footer';
+import LoaderAnimation from './components/LoaderAnimation';
 
 const Roots = () => {
     const [path, setPath] = useState('HOME')
@@ -22,14 +23,16 @@ const Roots = () => {
         }
     }, [pathName])
 
+
     // console.log(path);
     return (
         <div className='bgImg min-h-screen h-full '>
             <Helmet>
                 <title>{path} || MS Build</title>
             </Helmet>
+
             {
-                loading && <div className='flex flex-col min-h-screen'>
+                loading ? <div className='flex flex-col min-h-screen'>
                     <div className='flex-grow'>
                         <div className='bg-sky-900'>
                             <SubHeading />
@@ -38,8 +41,10 @@ const Roots = () => {
                         <Outlet />
                     </div>
                     <Footer />
-                </div>
+                </div> : <div className='flex justify-center items-center h-screen'><LoaderAnimation /></div>
             }
+
+
         </div>
     );
 };

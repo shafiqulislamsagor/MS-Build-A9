@@ -3,7 +3,6 @@ import { useLoaderData } from 'react-router-dom';
 
 
 const Estate = () => {
-
     const cardData = useLoaderData();
     return (
         <div className="w-11/12 lg:w-4/5 mx-auto mt-24">

@@ -11,11 +11,13 @@ const ContextHooks = ({ children }) => {
 
     // Email Create Users
     const registerHooks = (email, password) => {
+        setLoading(false)
         return createUserWithEmailAndPassword(Auth, email, password)
     }
 
     // Update Profile Users
     const update = (name,photo) =>{
+        setLoading(false)
         return updateProfile(Auth.currentUser, {
             displayName: name, photoURL: photo
         })
@@ -23,23 +25,27 @@ const ContextHooks = ({ children }) => {
 
     // Log In Users
     const logIn = (email,password) =>{
+        setLoading(false)
         return signInWithEmailAndPassword(Auth, email, password)
     }
 
     // Google Create Users
     const googleProvider = new GoogleAuthProvider()
     const googleHooks = () => {
+        setLoading(false)
         return signInWithPopup(Auth, googleProvider)
     }
 
     // GitHub Create Users
     const GitHubProvider = new GithubAuthProvider();
     const gitHubHooks = () => {
+        setLoading(false)
         return signInWithPopup(Auth, GitHubProvider)
     }
 
 
     const logoutHooks = () => {
+        setLoading(false)
         return signOut(Auth)
     }
     useEffect(() => {

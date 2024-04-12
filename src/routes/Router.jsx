@@ -9,37 +9,45 @@ import Login from "../pages/Login";
 import RegisterPage from "../pages/RegisterPage";
 import PrivetSignIn from "./PrivetSignIn";
 import CardDetails from "../components/CardDetails";
+import Error from "../pages/Error";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Roots/>,
+        errorElement:<Error/>,
         children:[
             {
                 path:'/',
                 element:<Home/>,
+                errorElement:<Error/>,
                 loader: ()=> fetch('/CardData.json')
             },
             {
                 path:'/card/:id',
                 element:<Privet><CardDetails/></Privet>,
+                errorElement:<Error/>,
                 loader: ()=> fetch('/CardData.json')
             },
             {
                 path:'/profile',
+                errorElement:<Error/>,
                 element:<Privet><Profile/></Privet>
             },
             {
                 path:'/About',
+                errorElement:<Error/>,
                 element:<Privet><About/></Privet>
             },
             {
                 path:'/login',
+                errorElement:<Error/>,
                 element:<PrivetSignIn><Login/></PrivetSignIn>
             },
             {
                 path:'/register',
+                errorElement:<Error/>,
                 element:<PrivetSignIn><RegisterPage/></PrivetSignIn>
             },
 
