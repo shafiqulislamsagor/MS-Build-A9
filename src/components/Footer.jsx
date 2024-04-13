@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="px-4 divide-y bg-cyan-950 bg-opacity-80 text-gray-100">
-            <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+        <footer className="px-4 divide-y bg-cyan-950  bg-opacity-80 text-gray-100">
+            <div className="container flex md:w-4/5 flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <h2 rel="noopener noreferrer" aria-label="Back to homepage" className="flex items-center p-2">
                         <Link to='/' className='font-semibold text-xl sm:text-2xl lg:text-4xl design'><span className='webPrimary'>M</span><span className='textLogo'>S</span> Build</Link>
                     </h2>
                 </div>
-                <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+                <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3">
                     <div className="space-y-3">
                         <h3 className="tracking-wide uppercase text-gray-50">Product</h3>
                         <ul className="space-y-1">
@@ -24,17 +24,6 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a rel="noopener noreferrer" href="#">FAQ</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase text-gray-50">Company</h3>
-                        <ul className="space-y-1">
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Privacy</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#">Terms of Service</a>
                             </li>
                         </ul>
                     </div>
