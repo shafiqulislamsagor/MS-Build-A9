@@ -32,7 +32,6 @@ const ContextHooks = ({ children }) => {
         }).then(() => {
             setUser(Auth.currentUser);
             setLoading(true); 
-            toast.success('Profile Update')
         }).catch(() => {
             toast.error('not changes')
         });
@@ -44,7 +43,6 @@ const ContextHooks = ({ children }) => {
         }).then(() => {
             setUser(Auth.currentUser);
             setLoading(true); 
-            toast.success('Profile Update')
         }).catch(() => {
             toast.error('not changes')
         });

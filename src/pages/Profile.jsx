@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ContextRoutes } from './../context/ContextHooks';
+import { toast } from "react-toastify";
 
 
 const Profile = () => {
@@ -11,11 +12,15 @@ const Profile = () => {
         const name = e.target.name.value;
         const url = e.target.url.value;
         // console.log(name , url);
-        if(name){
-            updateProfiles(name)
-        }
-        if(url){
-            updateProfilesPhoto(url)
+        if(name || url){
+            if(name){
+                updateProfiles(name)
+            }
+            if(url){
+                updateProfilesPhoto(url)
+            }
+            
+            toast.success('Profile Update')
         }
     }
     return (
