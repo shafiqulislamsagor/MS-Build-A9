@@ -5,14 +5,14 @@ const Review = ({ review }) => {
     return (
         <div data-aos="flip-left">
 
-            <div className="container flex cursor-pointer hover:scale-105 duration-150 hover:border flex-col w-full p-6 mx-auto divide-y rounded-md divide-gray-100 bg-cyan-900 text-gray-100">
+            <div className="container lato flex cursor-pointer hover:scale-105 duration-150 hover:border flex-col w-full p-6 mx-auto divide-y rounded-md divide-gray-100 bg-cyan-900 text-gray-100">
                 <div className="flex justify-between p-4">
                     <div className="flex space-x-4">
                         <div>
                             <img src={img} alt="" className="object-cover w-12 h-12 rounded-full bg-gray-500" />
                         </div>
                         <div>
-                            <h4 className="font-bold">{name}</h4>
+                            <h4 className="font-bold saira text-2xl">{name}</h4>
                             <span className="text-xs text-gray-400">{dayAgo}</span>
                         </div>
                     </div>

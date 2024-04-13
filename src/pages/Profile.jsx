@@ -25,7 +25,7 @@ const Profile = () => {
     }
     return (
         <div>
-            <div className="flex justify-center my-12">
+            <div className="flex justify-center my-12 saira">
                 <div className=" p-8 sm:flex rounded-3xl sm:space-x-6 bg-cyan-900 text-gray-100">
                     <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
                         <img src={user?.photoURL

@@ -3,7 +3,7 @@ import RatingAni from './RatingAni';
 
 const TotalReview = () => {
     return (
-        <section className="text-gray-100 my-24">
+        <section className="text-gray-100 my-24 lato">
             <div className="container  flex flex-col-reverse mx-auto lg:flex-row">
                 <div data-aos="fade-right" className="flex rounded-e-2xl lg:rounded-e-none lg:rounded-l-2xl flex-1 flex-col p-8 shadow-sm rounded-xl lg:p-12 bg-cyan-950 bg-opacity-80 text-gray-100">
                     <div className="flex flex-col w-full">
