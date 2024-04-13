@@ -80,7 +80,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='sliderB min-h-screen'>
+                    <div className='sliderC min-h-screen'>
                         <div className='bg-black bg-opacity-70 w-full min-h-screen'>
                             <section className="py-5 bg-transparent text-gray-100 flex flex-col justify-center">
                                 <div className="container flex items-end mt-16 w-11/12 mx-auto py-4">
@@ -104,7 +104,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='sliderB min-h-screen'>
+                    <div className='sliderD min-h-screen'>
                         <div className='bg-black bg-opacity-70 w-full min-h-screen'>
                             <section className="py-5 bg-transparent text-gray-100 flex flex-col justify-center">
                                 <div className="container flex items-end mt-16 w-11/12 mx-auto py-4">
@@ -128,7 +128,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='sliderB min-h-screen'>
+                    <div className='sliderE min-h-screen'>
                         <div className='bg-black bg-opacity-70 w-full min-h-screen'>
                             <section className="py-5 bg-transparent text-gray-100 flex flex-col justify-center">
                                 <div className="container flex items-end mt-16 w-11/12 mx-auto py-4">

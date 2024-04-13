@@ -12,10 +12,7 @@ const CardComponent = ({ card }) => {
     // console.log(card);
     const { id,estate_title, price, status, area, location, facilities, images } = card
     return (
-        <Card data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="300"
-        data-aos-offset="0" className='saira'>
+        <Card data-aos="fade-zoom-in" className='saira'>
             <CardActionArea className='h-full'>
                 <div className='h-40'>
                     <ImgSlider img={images} />

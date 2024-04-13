@@ -128,47 +128,5 @@
             "https://i.ibb.co/87nV9hp/home666.jpg",
             "https://i.ibb.co/KFj4cwY/home66.jpg"
         ]
-    },
-    {
-        "id": 7,
-        "estate_title": "Rustic Cabin in the Rocky Mountains",
-        "segment_name": "Mountain",
-        "description": "Escape the hustle and bustle of city life in this charming rustic cabin nestled in the majestic Rocky Mountains. Surrounded by towering pine trees and sweeping mountain views, this cozy retreat offers the perfect opportunity to reconnect with nature and unwind in peace and tranquility. The cabin features 1000 square feet of rustic yet comfortable living space, with a warm and inviting interior that exudes charm and character. The main level boasts a cozy living room with a wood-burning stove, perfect for chilly mountain evenings, and a fully equipped kitchen with modern appliances and a dining area. Upstairs, you'll find a spacious bedroom and a full bathroom, each offering stunning views of the surrounding landscape. Outside, the expansive deck provides plenty of space for outdoor dining and relaxation, while nearby hiking trails offer endless opportunities for exploration and adventure. Whether you're seeking a weekend getaway or a permanent retreat, this rustic cabin offers the perfect escape to the natural beauty of the Rocky Mountains.",
-        "price": "$250,000",
-        "status": "sale",
-        "area": "1000 sqft",
-        "location": "Colorado, USA",
-        "facilities": [
-            "wood-burning stove",
-            "deck with mountain views",
-            "hiking trails nearby"
-        ],
-        "images": [
-            "https://i.ibb.co/5rsJYk9/home7.jpg",
-            "https://i.ibb.co/kDHLKkd/home3333.jpg",
-            "https://i.ibb.co/RQ7J6LZ/home777.jpg",
-            "https://i.ibb.co/RyZFVZL/home77.jpg"
-        ]
-    },
-    {
-        "id": 8,
-        "estate_title": "Contemporary Townhouse in San Francisco",
-        "segment_name": "Urban",
-        "description": "Experience modern urban living in this contemporary townhouse located in the vibrant city of San Francisco. Nestled in a bustling neighborhood with easy access to dining, shopping, and cultural attractions, this stylish residence offers the perfect blend of comfort and convenience. The townhouse features 2000 square feet of living space, with an open-concept layout and designer finishes throughout. The main level boasts a spacious living area with hardwood floors and large windows that flood the interior with natural light, as well as a gourmet kitchen with quartz countertops and stainless steel appliances. Upstairs, you'll find a luxurious master suite with a walk-in closet and en-suite bathroom, along with two additional bedrooms and a full bathroom. The rooftop deck offers breathtaking views of the city skyline, perfect for entertaining guests or enjoying a quiet evening under the stars. With its prime location near public transportation and major highways, this contemporary townhouse offers the ultimate urban lifestyle for those seeking modern comforts in the heart of San Francisco.",
-        "price": "$1,200,000",
-        "status": "sale",
-        "area": "2000 sqft",
-        "location": "San Francisco, California",
-        "facilities": [
-            "rooftop deck",
-            "garage",
-            "smart home technology"
-        ],
-        "images": [
-            "https://i.ibb.co/2jspqsY/home8.jpg",
-            "https://i.ibb.co/8B3QNXv/home2222.jpg",
-            "https://i.ibb.co/Jj0DfKH/home888.jpg",
-            "https://i.ibb.co/RyZFVZL/home77.jpg"
-        ]
     }
 ]

@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Shafiqul Islam Sagor",
+        "dayAgo": "3 days ago",
+        "description": "Great product, works exactly as described. Very satisfied with the purchase!",
+        "longDes":"This product is fantastic! It's well-designed, durable, and incredibly user-friendly. From its sleek appearance to its impressive functionality, it's exceeded all my expectations. Whether you're a beginner or an expert, this product is a must-have for anyone looking for quality and reliability in their tools.",
+        "img": "https://i.ibb.co/wCwRrMF/sagor-White.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Al Mujiza Rahman Habiba",
+        "dayAgo": "5 days ago",
+        "description": "The product arrived earlier than expected and in perfect condition. Highly recommended!",
+        "longDes":"This product is fantastic! It's well-designed, durable, and incredibly user-friendly. From its sleek appearance to its impressive functionality, it's exceeded all my expectations. Whether you're a beginner or an expert, this product is a must-have for anyone looking for quality and reliability in their tools.",
+        "img": "https://i.ibb.co/9Tczc6M/download.jpg"
+        ,
+        "rating": 4.8
+    },
+    {
+        "name": "Ab Rahim",
+        "dayAgo": "1 week ago",
+        "description": "Unfortunately, the product didn't meet my expectations. It arrived damaged and customer service was unresponsive.",
+        "longDes":"This product is fantastic! It's well-designed, durable, and incredibly user-friendly. From its sleek appearance to its impressive functionality, it's exceeded all my expectations. Whether you're a beginner or an expert, this product is a must-have for anyone looking for quality and reliability in their tools.",
+        "img": "https://i.ibb.co/Sn5Qg8P/rahim.jpg",
+        "rating": 4.2
+    },
+    {
+        "name": "Rebeka Sultana",
+        "dayAgo": "2 weeks ago",
+        "description": "I love this product! It's been a game-changer for me. Will definitely be purchasing more in the future.",
+        "longDes":"This product is fantastic! It's well-designed, durable, and incredibly user-friendly. From its sleek appearance to its impressive functionality, it's exceeded all my expectations. Whether you're a beginner or an expert, this product is a must-have for anyone looking for quality and reliability in their tools.",
+        "img": "https://i.ibb.co/yRXZ9bw/images.jpg",
+        "rating": 4.9
+    }
+]

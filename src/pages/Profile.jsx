@@ -10,7 +10,7 @@ const Profile = () => {
         e.preventDefault()
         const name = e.target.name.value;
         const url = e.target.url.value;
-        console.log(name , url);
+        // console.log(name , url);
         updateProfiles(name,url)
     }
     return (
