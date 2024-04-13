@@ -22,3 +22,4 @@
  - [Lottie](https://www.npmjs.com/package/lottie-react)
  - [React toastify](https://www.npmjs.com/package/react-toastify)
  - [React helmet](https://www.npmjs.com/package/react-helmet-async)
+ - [React tooltip](https://www.npmjs.com/package/react-tooltip)

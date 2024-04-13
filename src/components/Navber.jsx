@@ -1,12 +1,15 @@
 import { Link, NavLink } from 'react-router-dom';
+import { Tooltip } from 'react-tooltip';
 import '../fonts/fonts.css'
 import { useContext, useState } from 'react';
 import 'animate.css';
 import { ContextRoutes } from '../context/ContextHooks';
 
+
+
 const Navber = () => {
-    const {  user ,logoutHooks } = useContext(ContextRoutes)
-    
+    const { user, logoutHooks } = useContext(ContextRoutes)
+
     const [hidden, setHidden] = useState(true)
     const profileHandle = () => {
         setHidden(!hidden)
@@ -14,7 +17,7 @@ const Navber = () => {
             setHidden(true)
         }, 3000);
     }
-    const logOutHandle = () =>{
+    const logOutHandle = () => {
         logoutHooks()
     }
     return (
@@ -44,10 +47,12 @@ const Navber = () => {
                 {
                     user ? <div>
                         <div className="relative lg:static">
+                            <Tooltip id="my-tooltip" />
                             <div onClick={profileHandle} role="button" className="btn btn-ghost btn-circle avatar">
-                                <div className="w-12 rounded-full">
+
+                                <div data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} className="w-12 rounded-full">
                                     {
-                                        user ? <img alt="Tailwind CSS Navbar component" src={user?.photoURL} /> : <img alt="Tailwind CSS Navbar component" src='https://i.ibb.co/nkQ9JmY/person-icon-no-photo-vector-8023186.jpg' />
+                                        user && <img alt="Tailwind CSS Navbar component" src={user?.photoURL} /> 
                                     }
                                 </div>
                             </div>

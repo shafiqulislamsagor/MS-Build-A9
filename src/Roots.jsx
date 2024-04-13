@@ -24,7 +24,7 @@ const Roots = () => {
     }, [pathName])
 
 
-    console.log(loading);
+    // console.log(loading);
     return (
         <div className='bgImg min-h-screen h-full '>
             <Helmet>
