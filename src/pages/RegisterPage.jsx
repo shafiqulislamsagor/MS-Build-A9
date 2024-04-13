@@ -34,12 +34,13 @@ const RegisterPage = () => {
         const strongPassword = passwordRegex.test(password)
         const confirmPassword = e.target.confirmPassword.value;
         // console.log(name,photoUrl,email,password,confirmPassword);
-        if (password === confirmPassword && strongPassword) {
+        if (password === confirmPassword) {
             // console.log(password);
-            registerHooks(email, password)
-                .then((current) => {
+            if(strongPassword){
+                registerHooks(email, password)
+                .then(() => {
                     update(name, photoUrl)
-                    console.log(current.user);
+                    // console.log(current.user);
                     toast.success('Created Your Accounts')
                     logoutHooks()
                     navigate('/login');
@@ -48,7 +49,13 @@ const RegisterPage = () => {
                     toast.error('Try Again')
                     navigate('/');
                 })
+                return
+            }
+            toast.error('password UpperCase , LowerCase and least 6 Characters')
+            return
         }
+        toast.error('Password and confirm password not Match')
+
     }
 
     const googleHandle = () => {

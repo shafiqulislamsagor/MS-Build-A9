@@ -32,7 +32,6 @@ const Login = () => {
             })
             .catch(() => {
                 toast.error('Wrong Your Email or Password.!')
-                navigate('/')
                 setLoading(true)
             })
     }
@@ -44,7 +43,6 @@ const Login = () => {
             })
             .catch(() => {
                 toast.error('Please, Try Again')
-                navigate('/');
                 setLoading(true)
             })
     }
@@ -56,7 +54,6 @@ const Login = () => {
             })
             .catch(() => {
                 toast.error('Please, Try Again')
-                navigate('/')
                 setLoading(true)
             })
     }
