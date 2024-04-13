@@ -32,6 +32,7 @@ const Login = () => {
             })
             .catch(() => {
                 toast.error('Wrong Your Email or Password.!')
+                navigate('/');
             })
     }
     const googleHandle = () => {
@@ -42,6 +43,7 @@ const Login = () => {
             })
             .catch(() => {
                 toast.error('Please, Try Again')
+                navigate('/');
             })
     }
     const githubHandle = () => {
@@ -52,6 +54,7 @@ const Login = () => {
             })
             .catch(() => {
                 toast.error('Please, Try Again')
+                navigate('/');
             })
     }
     const hideHandle = () => {

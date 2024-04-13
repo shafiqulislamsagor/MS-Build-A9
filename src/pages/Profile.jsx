@@ -1,27 +1,39 @@
+import { useContext } from "react";
+import { ContextRoutes } from './../context/ContextHooks';
 
 
 const Profile = () => {
+    const ContextInfo = useContext(ContextRoutes)
+    const { user ,updateProfiles} = ContextInfo
+    console.log(user);
     const fromHandle = e => {
         e.preventDefault()
+        const name = e.target.name.value;
+        const url = e.target.url.value;
+        console.log(name , url);
+        updateProfiles(name,url)
     }
     return (
         <div>
             <div className="flex justify-center my-12">
-                <div className="max-w-md p-8 sm:flex rounded-3xl sm:space-x-6 bg-cyan-900 text-gray-100">
+                <div className=" p-8 sm:flex rounded-3xl sm:space-x-6 bg-cyan-900 text-gray-100">
                     <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
-                        <img src="https://source.unsplash.com/100x100/?portrait?1" alt="" className="object-cover object-center w-full h-full rounded bg-gray-500" />
+                        <img src={user?.photoURL
+                        } alt="" className="object-cover object-center w-full h-full rounded bg-gray-500" />
                     </div>
                     <div className="flex flex-col space-y-4">
                         <div>
-                            <h2 className="text-2xl font-semibold">Leroy Jenkins</h2>
-                            <span className="text-sm text-gray-400">General manager</span>
+                            <h2 className="text-2xl font-semibold">{user?.
+                                displayName
+                            }</h2>
+                            <span className="text-sm text-gray-400">{user?.emailVerified ? 'Verified' : 'Not Verified'}</span>
                         </div>
                         <div className="space-y-1">
                             <span className="flex items-center space-x-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="Email address" className="w-4 h-4">
                                     <path fill="currentColor" d="M274.6,25.623a32.006,32.006,0,0,0-37.2,0L16,183.766V496H496V183.766ZM464,402.693,339.97,322.96,464,226.492ZM256,51.662,454.429,193.4,311.434,304.615,256,268.979l-55.434,35.636L57.571,193.4ZM48,226.492,172.03,322.96,48,402.693ZM464,464H48V440.735L256,307.021,464,440.735Z"></path>
                                 </svg>
-                                <span className="text-gray-400">leroy.jenkins@company.com</span>
+                                <span className="text-gray-400">{user?.email}</span>
                             </span>
                             <span className="flex items-center space-x-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="Phonenumber" className="w-4 h-4">
@@ -35,19 +47,19 @@ const Profile = () => {
             </div>
             <div className="flex justify-center w-full lg:w-1/3 md:w-2/3 mx-auto">
                 <form onSubmit={fromHandle} className="card-body ">
-                    <span className="label-text text-3xl text-center text-white font-semibold saira">Changes Your Profile Now</span>
+                    <span className="label-text text-3xl text-center text-white font-semibold saira">Update Your Profile Now</span>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-white font-semibold saira">FullName</span>
                         </label>
-                        <input type="text" placeholder="Name" name='name' className="input input-bordered text-black font-medium bg-opacity-85"  />
+                        <input type="text" placeholder="Name" name='name' className="input input-bordered text-black font-medium bg-opacity-85" />
                     </div>
 
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-white font-semibold saira">Photo URL</span>
                         </label>
-                        <input type="text" placeholder="Photo URL" name='url' className="input input-bordered text-black font-medium bg-opacity-85"  />
+                        <input type="text" placeholder="Photo URL" name='url' className="input input-bordered text-black font-medium bg-opacity-85" />
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Save</button>

@@ -1,7 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import Auth from './../firebase/firebase.config';
+
+import { toast } from "react-toastify";
+import Auth from "../../firebase.config";
 
 export const ContextRoutes = createContext(null)
 
@@ -14,13 +16,27 @@ const ContextHooks = ({ children }) => {
         setLoading(false)
         return createUserWithEmailAndPassword(Auth, email, password)
     }
-
-    // Update Profile Users
+    // from profile user update
     const update = (name,photo) =>{
         setLoading(false)
         return updateProfile(Auth.currentUser, {
             displayName: name, photoURL: photo
         })
+    }
+
+    // Update Profile Users
+    const updateProfiles = (name, photo) => {
+        setLoading(false);
+        return updateProfile(Auth.currentUser, {
+            displayName: name,
+            photoURL: photo
+        }).then(() => {
+            setUser(Auth.currentUser);
+            setLoading(true); 
+            toast.success('Profile Update')
+        }).catch(() => {
+            toast.error('not changes')
+        });
     }
 
     // Log In Users
@@ -56,8 +72,8 @@ const ContextHooks = ({ children }) => {
         return () => {
             unSubscribe()
         }
-    }, [])
-    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn,loading}
+    }, [user])
+    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn,updateProfiles,loading}
     return (
         <ContextRoutes.Provider value={contextValues}>
             {children}

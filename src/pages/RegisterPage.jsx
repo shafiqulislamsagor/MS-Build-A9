@@ -46,6 +46,7 @@ const RegisterPage = () => {
                 })
                 .catch(() => {
                     toast.error('Try Again')
+                    navigate('/');
                 })
         }
     }
@@ -60,6 +61,7 @@ const RegisterPage = () => {
             })
             .catch(() => {
                 toast.error('not create a accounts')
+                navigate('/');
             })
     }
     const GitHubHandle = () => {
@@ -72,6 +74,7 @@ const RegisterPage = () => {
             })
             .catch(() => {
                 toast.error('not create a accounts')
+                navigate('/');
             })
     }
 
