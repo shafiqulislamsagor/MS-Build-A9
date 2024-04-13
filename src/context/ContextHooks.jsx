@@ -25,10 +25,21 @@ const ContextHooks = ({ children }) => {
     }
 
     // Update Profile Users
-    const updateProfiles = (name, photo) => {
+    const updateProfiles = (name) => {
         setLoading(false);
         return updateProfile(Auth.currentUser, {
             displayName: name,
+        }).then(() => {
+            setUser(Auth.currentUser);
+            setLoading(true); 
+            toast.success('Profile Update')
+        }).catch(() => {
+            toast.error('not changes')
+        });
+    }
+    const updateProfilesPhoto = ( photo) => {
+        setLoading(false);
+        return updateProfile(Auth.currentUser, {
             photoURL: photo
         }).then(() => {
             setUser(Auth.currentUser);
@@ -73,7 +84,7 @@ const ContextHooks = ({ children }) => {
             unSubscribe()
         }
     }, [user])
-    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn,updateProfiles,loading}
+    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn,updateProfiles,loading,updateProfilesPhoto}
     return (
         <ContextRoutes.Provider value={contextValues}>
             {children}

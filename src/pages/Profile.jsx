@@ -4,14 +4,19 @@ import { ContextRoutes } from './../context/ContextHooks';
 
 const Profile = () => {
     const ContextInfo = useContext(ContextRoutes)
-    const { user ,updateProfiles} = ContextInfo
+    const { user ,updateProfiles,updateProfilesPhoto} = ContextInfo
     console.log(user);
     const fromHandle = e => {
         e.preventDefault()
         const name = e.target.name.value;
         const url = e.target.url.value;
         // console.log(name , url);
-        updateProfiles(name,url)
+        if(name){
+            updateProfiles(name)
+        }
+        if(url){
+            updateProfilesPhoto(url)
+        }
     }
     return (
         <div>
