@@ -20,7 +20,7 @@ const Login = () => {
     // console.log(location);
     const [hidePoint, setHidePoint] = useState(true)
     const [hide, setHide] = useState('password')
-    const { logIn, gitHubHooks, googleHooks } = useContext(ContextRoutes)
+    const { logIn, gitHubHooks, googleHooks ,setLoading} = useContext(ContextRoutes)
     const formHandle = e => {
         e.preventDefault()
         const email = e.target.email.value;
@@ -32,7 +32,8 @@ const Login = () => {
             })
             .catch(() => {
                 toast.error('Wrong Your Email or Password.!')
-                navigate('/');
+                navigate('/')
+                setLoading(true)
             })
     }
     const googleHandle = () => {
@@ -44,6 +45,7 @@ const Login = () => {
             .catch(() => {
                 toast.error('Please, Try Again')
                 navigate('/');
+                setLoading(true)
             })
     }
     const githubHandle = () => {
@@ -54,20 +56,21 @@ const Login = () => {
             })
             .catch(() => {
                 toast.error('Please, Try Again')
-                navigate('/');
+                navigate('/')
+                setLoading(true)
             })
     }
     const hideHandle = () => {
         if (hidePoint) {
             setHide('text')
             setHidePoint(false)
-            console.log('nai');
+            // console.log('nai');
             return
         }
         if (!hidePoint) {
             setHide('password')
             setHidePoint(true)
-            console.log('object');
+            // console.log('object');
         }
     }
     return (

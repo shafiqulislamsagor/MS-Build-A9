@@ -82,7 +82,7 @@ const ContextHooks = ({ children }) => {
             unSubscribe()
         }
     }, [user])
-    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn,updateProfiles,loading,updateProfilesPhoto}
+    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn,updateProfiles,loading,updateProfilesPhoto,setLoading}
     return (
         <ContextRoutes.Provider value={contextValues}>
             {children}
