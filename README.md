@@ -23,3 +23,4 @@
  - [React toastify](https://www.npmjs.com/package/react-toastify)
  - [React helmet](https://www.npmjs.com/package/react-helmet-async)
  - [React tooltip](https://www.npmjs.com/package/react-tooltip)
+ - [React icons](https://react-icons.github.io/react-icons/)

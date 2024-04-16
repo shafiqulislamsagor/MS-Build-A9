@@ -11,6 +11,7 @@ import PrivetSignIn from "./PrivetSignIn";
 import CardDetails from "../components/CardDetails";
 import Error from "../pages/Error";
 import HomePage from "../pages/HomePage";
+import Update from "../pages/Update";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
                 path:'/profile',
                 errorElement:<Error/>,
                 element:<Privet><Profile/></Privet>
+            },
+            {
+                path:'/profileUpdate',
+                errorElement:<Error/>,
+                element:<Privet><Update/></Privet>
             },
             {
                 path:'/About',

@@ -8,7 +8,7 @@ import Auth from "../../firebase.config";
 export const ContextRoutes = createContext(null)
 
 const ContextHooks = ({ children }) => {
-    const [loading,setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
     const [user, setUser] = useState(null)
 
     // Email Create Users
@@ -17,7 +17,7 @@ const ContextHooks = ({ children }) => {
         return createUserWithEmailAndPassword(Auth, email, password)
     }
     // from profile user update
-    const update = (name,photo) =>{
+    const update = (name, photo) => {
         setLoading(false)
         return updateProfile(Auth.currentUser, {
             displayName: name, photoURL: photo
@@ -31,25 +31,26 @@ const ContextHooks = ({ children }) => {
             displayName: name,
         }).then(() => {
             setUser(Auth.currentUser);
-            setLoading(true); 
+            setLoading(true);
         }).catch(() => {
             toast.error('not changes')
         });
     }
-    const updateProfilesPhoto = ( photo) => {
+    const updateProfilesPhoto = (photo) => {
         setLoading(false);
+        // console.log(Auth,Auth.currentUser);
         return updateProfile(Auth.currentUser, {
             photoURL: photo
         }).then(() => {
             setUser(Auth.currentUser);
-            setLoading(true); 
+            setLoading(true);
         }).catch(() => {
             toast.error('not changes')
         });
     }
 
     // Log In Users
-    const logIn = (email,password) =>{
+    const logIn = (email, password) => {
         setLoading(false)
         return signInWithEmailAndPassword(Auth, email, password)
     }
@@ -82,7 +83,13 @@ const ContextHooks = ({ children }) => {
             unSubscribe()
         }
     }, [user])
-    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks ,update,logIn,updateProfiles,loading,updateProfilesPhoto,setLoading}
+    useEffect(()=>{
+        setUser(Auth)
+    },[])
+    useEffect(()=>{
+        setUser(Auth)
+    },[])
+    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks, update, logIn, updateProfiles, loading, updateProfilesPhoto, setLoading }
     return (
         <ContextRoutes.Provider value={contextValues}>
             {children}

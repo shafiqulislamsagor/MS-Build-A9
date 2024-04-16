@@ -17,7 +17,7 @@ AOS.init();
 
 const RegisterPage = () => {
     const contextInfo = useContext(ContextRoutes)
-    const { registerHooks, logoutHooks, googleHooks, gitHubHooks, update } = contextInfo
+    const {user, registerHooks, logoutHooks, googleHooks, gitHubHooks, update,setLoading } = contextInfo
     const [hidePoint, setHidePoint] = useState(true)
     const [hide, setHide] = useState('password')
     const navigate = useNavigate();
@@ -47,7 +47,8 @@ const RegisterPage = () => {
                 })
                 .catch(() => {
                     toast.error('Try Again')
-                    navigate('/');
+                    console.log(user);
+                    setLoading(true)
                 })
                 return
             }
@@ -68,7 +69,7 @@ const RegisterPage = () => {
             })
             .catch(() => {
                 toast.error('not create a accounts')
-                navigate('/');
+                setLoading(true)
             })
     }
     const GitHubHandle = () => {
@@ -81,7 +82,7 @@ const RegisterPage = () => {
             })
             .catch(() => {
                 toast.error('not create a accounts')
-                navigate('/');
+                setLoading(true)
             })
     }
 
