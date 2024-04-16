@@ -8,6 +8,7 @@ import { IoHomeOutline } from 'react-icons/io5';
 import { CgProfile } from 'react-icons/cg';
 import { FaPersonCircleCheck } from 'react-icons/fa6';
 import { BsFillInfoCircleFill } from 'react-icons/bs';
+import { toast } from 'react-toastify';
 
 
 
@@ -23,6 +24,12 @@ const Navber = () => {
     }
     const logOutHandle = () => {
         logoutHooks()
+        .then(()=>{
+            toast.success('Log Out Success ..!')
+        })
+        .catch(()=>{
+            toast.error('logOut failed..!')
+        })
     }
     return (
         <header className="px-4 bg-sky-900 saira  text-gray-100 sticky z-10 top-0">
