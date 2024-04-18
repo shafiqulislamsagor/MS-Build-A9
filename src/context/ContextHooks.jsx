@@ -68,7 +68,10 @@ const ContextHooks = ({ children }) => {
         setLoading(false)
         return signInWithPopup(Auth, GitHubProvider)
     }
-
+    const current = Auth.currentUser
+    useEffect(() => {
+        setUser(current)
+    }, [current])
 
     const logoutHooks = () => {
         setLoading(false)
@@ -76,20 +79,20 @@ const ContextHooks = ({ children }) => {
     }
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(Auth, (user) => {
-            setUser(user)
+            if(current){
+                setUser(current)
+            }
+            else(
+                setUser(user)
+            )
             setLoading(true)
         })
         return () => {
             unSubscribe()
         }
-    }, [user])
-    useEffect(()=>{
-        setUser(Auth)
-    },[])
-    useEffect(()=>{
-        setUser(Auth)
-    },[])
-    const contextValues = { registerHooks, logoutHooks, user, googleHooks, gitHubHooks, update, logIn, updateProfiles, loading, updateProfilesPhoto, setLoading }
+    }, [current])
+
+    const contextValues = { registerHooks, logoutHooks, user,current, googleHooks, gitHubHooks, update, logIn, updateProfiles, loading, updateProfilesPhoto, setLoading }
     return (
         <ContextRoutes.Provider value={contextValues}>
             {children}

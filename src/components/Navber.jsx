@@ -14,7 +14,7 @@ import { toast } from 'react-toastify';
 
 const Navber = () => {
     const { user, logoutHooks } = useContext(ContextRoutes)
-
+    // console.log(user);
     const [hidden, setHidden] = useState(true)
     const profileHandle = () => {
         setHidden(!hidden)
@@ -24,12 +24,12 @@ const Navber = () => {
     }
     const logOutHandle = () => {
         logoutHooks()
-        .then(()=>{
-            toast.success('Log Out Success ..!')
-        })
-        .catch(()=>{
-            toast.error('logOut failed..!')
-        })
+            .then(() => {
+                toast.success('Log Out Success ..!')
+            })
+            .catch(() => {
+                toast.error('logOut failed..!')
+            })
     }
     return (
         <header className="px-4 bg-sky-900 saira  text-gray-100 sticky z-10 top-0">
@@ -69,7 +69,7 @@ const Navber = () => {
 
                                 <div data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} className="w-12 rounded-full">
                                     {
-                                        user && <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+                                        user && <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
                                     }
                                 </div>
                             </div>
